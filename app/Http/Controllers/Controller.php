@@ -33,6 +33,11 @@ class Controller
     protected $logger;
 
     /**
+     * Model
+     */
+    protected $model;
+
+    /**
      * Controller constructor.
      * @param ContainerInterface $container
      * @throws \Psr\Container\ContainerExceptionInterface
@@ -43,6 +48,19 @@ class Controller
         $this->container = $container;
         $this->view = $this->container->get('view');
         $this->logger = $this->container->get('logger');
+    }
+
+    /**
+     * 用于返回渲染模板参数
+     *
+     * @param Response $response
+     * @param string $template
+     * @param object|array $data
+     * @return mixed
+     */
+    protected function render(Response $response, $template, $data)
+    {
+        return $this->view->render($response, $template, ['data' => $data]);
     }
 
 }

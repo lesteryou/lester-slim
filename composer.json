@@ -1,5 +1,5 @@
 {
-  "name": "slim-lester",
+  "name": "lester-slim",
   "description": "A small framework base on slim",
   "authors": [
     {
@@ -12,7 +12,11 @@
     "slim/slim": "^3.1",
     "slim/twig-view": "~2.3.0",
     "monolog/monolog": "^1.17",
-    "illuminate/database": "5.5.*"
+    "illuminate/database": "5.5.*",
+    "illuminate/events":"5.5.*",
+    "akrabat/ip-address-middleware": "^1.0",
+    "dflydev/fig-cookies":"1.0.2",
+    "vlucas/phpdotenv": "^2.5"
   },
   "autoload": {
     "psr-4": {
